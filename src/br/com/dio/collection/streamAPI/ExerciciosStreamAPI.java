@@ -102,7 +102,8 @@ public class ExerciciosStreamAPI {
         System.out.println("Agrupe os valores ímpares múltiplos de 3 ou de 5:");
 //        dica: collect(Collectors.groupingBy(new Function())
         Map<Boolean, List<Integer>> collectNumerosMultiplosDe3E5 = numerosAleatoriosInteger.stream()
-                .collect(Collectors.groupingBy(i -> (i % 3 == 0 || i % 5 == 0)));
+                .collect(Collectors.groupingBy(i -> ((i % 2 != 0) && (t % 3 == 0 || i % 5 == 0))));
+        collectMultiplosDe3E5.remove(false);
         System.out.println(collectNumerosMultiplosDe3E5);
     }
 }
